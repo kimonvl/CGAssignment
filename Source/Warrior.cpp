@@ -22,7 +22,11 @@ void Warrior::Update(float dt)
 	}
 	posToBe = pos;
 	if(m_mb->BlockState(pos.x, -pos.z) == 4)
+	{ 
 		std::cout << "Died----------------------------------" << std::endl;
+		pos = glm::vec3(0.0f);
+		UpdateTransforms();
+	}
 	const glm::vec3 r = glm::normalize(glm::cross(front, glm::vec3(0.0f, 1.0f, 0.0f)));
 	const glm::vec3 angle_offset = angularSpeed * r * dt;
 	if (Input::IsKeyPressed(SDL_SCANCODE_H))

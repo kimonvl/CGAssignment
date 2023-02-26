@@ -219,7 +219,7 @@ void Renderer::BuildWorld()
 	door1->GetTransform() = glm::translate(glm::mat4(1.0f), pos1)*
 		glm::rotate(glm::mat4(1.0f), glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-	glm::vec3 pos2(3.0f, 0.0f, -12.5f);
+	glm::vec3 pos2(4.0f, 0.0f, -12.0f);
 	glm::vec3 offset2(0.5f, 0.0f, -0.25f);
 	Door* door2 = new Door(s_Models[DOOR], war, 90.0f, pos2, offset2, mb);
 	m_nodes.emplace_back(door2);
